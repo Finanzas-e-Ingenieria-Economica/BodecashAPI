@@ -1,6 +1,6 @@
-namespace BodecashAPI.Bodecash.Domain.Models;
+namespace BodecashAPI.Bodecash.Resources.Get;
 
-public class InstallmentPlan
+public class InstallmentPlanResource
 {
     public int Id { get; set; }
     public decimal Fee { get; set; }
@@ -11,6 +11,4 @@ public class InstallmentPlan
     public string PaymentTimeType { get; set; }
     
     public int CreditId { get; set; }
-    public Credit Credit { get; set; }
-    public IList<IPPayment> IPPayments { get; set; }
 }

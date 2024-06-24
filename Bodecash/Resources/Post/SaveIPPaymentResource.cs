@@ -1,8 +1,7 @@
-namespace BodecashAPI.Bodecash.Domain.Models;
+namespace BodecashAPI.Bodecash.Resources.Post;
 
-public class IPPayment
+public class SaveIPPaymentResource
 {
-    public int Id { get; set; }
     public decimal Capital { get; set; }
     public decimal Interest { get; set; }
     public decimal Fee { get; set; }
@@ -13,6 +12,4 @@ public class IPPayment
     public DateTime PaymentDate { get; set; }
     
     public int InstallmentPlanId { get; set; }
-    public InstallmentPlan InstallmentPlan { get; set; }
-    public IList<IPPaymentProduct> PaymentProducts { get; set; }
 }

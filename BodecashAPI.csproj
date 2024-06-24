@@ -7,24 +7,23 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="13.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.3.24172.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.0-preview.3.24172.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="2.0.0-preview1-final" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0-preview.3" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Bodecash\Controllers\" />
-      <Folder Include="Bodecash\Domain\Communication\" />
       <Folder Include="Bodecash\Domain\Repositories\" />
       <Folder Include="Bodecash\Domain\Services\" />
-      <Folder Include="Bodecash\Mapping\" />
       <Folder Include="Bodecash\Persistence\Repositories\" />
-      <Folder Include="Bodecash\Resources\Get\" />
-      <Folder Include="Bodecash\Resources\Post\" />
       <Folder Include="Bodecash\Resources\Put\" />
       <Folder Include="Bodecash\Services\" />
-      <Folder Include="Shared\Domain\Services\Communication\" />
-      <Folder Include="Shared\Extensions\" />
-      <Folder Include="Shared\Persistence\" />
+      <Folder Include="Shared\Persistence\Repositories\" />
     </ItemGroup>
 
 </Project>

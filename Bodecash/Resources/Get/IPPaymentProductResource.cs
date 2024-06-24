@@ -1,6 +1,6 @@
-namespace BodecashAPI.Bodecash.Domain.Models;
+namespace BodecashAPI.Bodecash.Resources.Get;
 
-public class IPPaymentProduct
+public class IPPaymentProductResource
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -9,5 +9,4 @@ public class IPPaymentProduct
     public DateTime PurchaseDate { get; set; }
     
     public int IPPaymentId { get; set; }
-    public IPPayment IPPayment { get; set; }
 }

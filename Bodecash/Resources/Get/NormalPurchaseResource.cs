@@ -1,6 +1,6 @@
-namespace BodecashAPI.Bodecash.Domain.Models;
+namespace BodecashAPI.Bodecash.Resources.Get;
 
-public class NormalPurchase
+public class NormalPurchaseResource
 {
     public int Id { get; set; }
     public decimal AmountDue { get; set; }
@@ -10,6 +10,4 @@ public class NormalPurchase
     public int? DaysPastDue { get; set; }
     
     public int CreditId { get; set; }
-    public Credit Credit { get; set; }
-    public IList<NPPurchase> NPPurchases { get; set; }
 }

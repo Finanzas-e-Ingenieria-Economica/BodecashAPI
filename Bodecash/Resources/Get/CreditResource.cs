@@ -1,6 +1,6 @@
-namespace BodecashAPI.Bodecash.Domain.Models;
+namespace BodecashAPI.Bodecash.Resources.Get;
 
-public class Credit
+public class CreditResource
 {
     public int Id { get; set; }
     public int InterestRate { get; set; }
@@ -14,9 +14,5 @@ public class Credit
     public decimal RemainingCredit { get; set; }
     
     public int ShopkeeperId { get; set; }
-    public Shopkeeper Shopkeeper { get; set; }
     public int ClientId { get; set; }
-    public Client Client { get; set; }
-    public IList<InstallmentPlan> InstallmentPlans { get; set; }
-    public IList<NormalPurchase> NormalPurchases { get; set; }
 }

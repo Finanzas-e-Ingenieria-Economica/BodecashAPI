@@ -6,5 +6,5 @@ public class Client
     
     public int PersonalDataId { get; set; }
     public PersonalData PersonalData { get; set; }
-    public Credit Credit { get; set; }
+    public IList<Credit> Credits { get; set; }
 }
