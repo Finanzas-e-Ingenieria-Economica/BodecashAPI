@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Bodecash\Controllers\" />
+      <Folder Include="Bodecash\Domain\Communication\" />
+      <Folder Include="Bodecash\Domain\Repositories\" />
+      <Folder Include="Bodecash\Domain\Services\" />
+      <Folder Include="Bodecash\Mapping\" />
+      <Folder Include="Bodecash\Persistence\Repositories\" />
+      <Folder Include="Bodecash\Resources\Get\" />
+      <Folder Include="Bodecash\Resources\Post\" />
+      <Folder Include="Bodecash\Resources\Put\" />
+      <Folder Include="Bodecash\Services\" />
+      <Folder Include="Shared\Domain\Services\Communication\" />
+      <Folder Include="Shared\Extensions\" />
+      <Folder Include="Shared\Persistence\" />
+    </ItemGroup>
+
+</Project>

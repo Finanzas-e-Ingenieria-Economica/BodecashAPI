@@ -1,0 +1,6 @@
+@BodecashAPI_HostAddress = http://localhost:5036
+
+GET {{BodecashAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
