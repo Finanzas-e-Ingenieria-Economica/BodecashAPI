@@ -14,5 +14,5 @@ public class IPPayment
     
     public int InstallmentPlanId { get; set; }
     public InstallmentPlan InstallmentPlan { get; set; }
-    public IList<IPPaymentProduct> PaymentProducts { get; set; }
+    public IList<IPPaymentProduct> IPPaymentProducts { get; set; }
 }

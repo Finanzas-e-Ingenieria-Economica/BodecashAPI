@@ -118,6 +118,46 @@ public class AppDbContext : DbContext
             .WithOne(p => p.PersonalData)
             .HasForeignKey<Shopkeeper>(p => p.PersonalDataId);
         
+        builder.Entity<Client>()
+            .HasMany(p => p.Credits)
+            .WithOne(p=>p.Client)
+            .HasForeignKey(p => p.ClientId);
+        
+        builder.Entity<Shopkeeper>()
+            .HasMany(p => p.Credits)
+            .WithOne(p=>p.Shopkeeper)
+            .HasForeignKey(p => p.ShopkeeperId);
+        
+        builder.Entity<Credit>()
+            .HasMany(p => p.NormalPurchases)
+            .WithOne(p=>p.Credit)
+            .HasForeignKey(p => p.CreditId);
+        
+        builder.Entity<Credit>()
+            .HasMany(p => p.InstallmentPlans)
+            .WithOne(p=>p.Credit)
+            .HasForeignKey(p => p.CreditId);
+
+        builder.Entity<NormalPurchase>()
+            .HasMany(p => p.NPPurchases)
+            .WithOne(p => p.NormalPurchase)
+            .HasForeignKey(p => p.NormalPurchaseId);
+
+        builder.Entity<NPPurchase>()
+            .HasMany(p => p.NPPurchaseProducts)
+            .WithOne(p => p.NPPurchase)
+            .HasForeignKey(p => p.NPPurchaseId);
+
+        builder.Entity<InstallmentPlan>()
+            .HasMany(p => p.IPPayments)
+            .WithOne(p => p.InstallmentPlan)
+            .HasForeignKey(p => p.InstallmentPlanId);
+
+        builder.Entity<IPPayment>()
+            .HasMany(p => p.IPPaymentProducts)
+            .WithOne(p => p.IPPayment)
+            .HasForeignKey(p => p.IPPaymentId);
+        
         // Apply Snake Case Naming Convention
         builder.UseSnakeCaseNamingConvention();
     }

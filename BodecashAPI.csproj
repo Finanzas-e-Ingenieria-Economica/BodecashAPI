@@ -17,13 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Bodecash\Controllers\" />
-      <Folder Include="Bodecash\Domain\Repositories\" />
-      <Folder Include="Bodecash\Domain\Services\" />
-      <Folder Include="Bodecash\Persistence\Repositories\" />
       <Folder Include="Bodecash\Resources\Put\" />
-      <Folder Include="Bodecash\Services\" />
-      <Folder Include="Shared\Persistence\Repositories\" />
     </ItemGroup>
 
 </Project>
