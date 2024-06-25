@@ -12,6 +12,7 @@ public class Credit
     public decimal CreditAmount { get; set; }
     public decimal UsedCredit { get; set; }
     public decimal RemainingCredit { get; set; }
+    public bool IsCreditPayed { get; set; }
     
     public int ShopkeeperId { get; set; }
     public Shopkeeper Shopkeeper { get; set; }

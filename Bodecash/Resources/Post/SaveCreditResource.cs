@@ -11,6 +11,7 @@ public class SaveCreditResource
     public decimal CreditAmount { get; set; }
     public decimal UsedCredit { get; set; }
     public decimal RemainingCredit { get; set; }
+    public bool IsPayed { get; set; }
     
     public int ShopkeeperId { get; set; }
     public int ClientId { get; set; }

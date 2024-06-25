@@ -9,6 +9,7 @@ public class InstallmentPlan
     public int? GracePeriodPeriods { get; set; }
     public int TotalTerm { get; set; }
     public string PaymentTimeType { get; set; }
+    public int CurrentTerm { get; set; }
     
     public int CreditId { get; set; }
     public Credit Credit { get; set; }

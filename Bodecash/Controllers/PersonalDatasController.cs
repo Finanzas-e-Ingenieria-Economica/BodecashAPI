@@ -57,7 +57,7 @@ public class PersonalDatasController : ControllerBase
         return Ok(personalDataResource);
     }
 
-    [HttpPost]
+    [HttpPost("verifyCredentials")]
     public async Task<IActionResult> VerifyCredentialsAsync([FromBody] LoginResource resource)
     {
         if (!ModelState.IsValid)

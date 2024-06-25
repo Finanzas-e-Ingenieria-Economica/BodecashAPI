@@ -33,6 +33,7 @@ public class AppDbContext : DbContext
         builder.Entity<Credit>().HasKey(p => p.Id);
         builder.Entity<Credit>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Credit>().Property(p => p.InterestRate).IsRequired();
+        builder.Entity<Credit>().Property(p => p.InterestType).IsRequired();
         builder.Entity<Credit>().Property(p => p.Capitalization);
         builder.Entity<Credit>().Property(p => p.PenaltyInterestRate).IsRequired();
         builder.Entity<Credit>().Property(p => p.DisbursementDate).IsRequired();
@@ -40,6 +41,7 @@ public class AppDbContext : DbContext
         builder.Entity<Credit>().Property(p => p.CreditAmount).IsRequired();
         builder.Entity<Credit>().Property(p => p.UsedCredit).IsRequired();
         builder.Entity<Credit>().Property(p => p.RemainingCredit).IsRequired();
+        builder.Entity<Credit>().Property(p => p.IsCreditPayed).IsRequired();
 
         builder.Entity<InstallmentPlan>().ToTable("InstallmentPlans");
         builder.Entity<InstallmentPlan>().HasKey(p => p.Id);
@@ -50,6 +52,7 @@ public class AppDbContext : DbContext
         builder.Entity<InstallmentPlan>().Property(p => p.GracePeriodPeriods);
         builder.Entity<InstallmentPlan>().Property(p => p.TotalTerm).IsRequired();
         builder.Entity<InstallmentPlan>().Property(p => p.PaymentTimeType).IsRequired();
+        builder.Entity<InstallmentPlan>().Property(p => p.CurrentTerm).IsRequired();
 
         builder.Entity<IPPayment>().ToTable("IPPayments");
         builder.Entity<IPPayment>().HasKey(p => p.Id);
