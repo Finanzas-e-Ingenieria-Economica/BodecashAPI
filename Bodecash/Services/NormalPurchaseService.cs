@@ -38,10 +38,10 @@ public class NormalPurchaseService : INormalPurchaseService
     {
         try
         {
-            var existingUnpaidCredit = await _creditRepository.FindUnpaidByClientId(credit.ClientId);
+            /*var existingUnpaidCredit = await _creditRepository.FindUnpaidByClientId(credit.ClientId);
             
             if (existingUnpaidCredit != null)
-                return new NormalPurchaseResponse("Client already has an unpaid credit.");
+                return new NormalPurchaseResponse("Client already has an unpaid credit.");*/
 
             credit.IsCreditPayed = false;
             await _creditRepository.AddAsync(credit);

@@ -40,6 +40,17 @@ public class ClientsController :  ControllerBase
         var resource = _mapper.Map<Client, ClientResource>(client);
         return Ok(resource);
     }
+    
+    [HttpGet("personaldata/{id:int}")]
+    public async Task<IActionResult> GetByPersonalDataIdAsync(int id)
+    {
+        var client = await _clientService.GetByPersonalDataIdAsync(id);
+        if (client == null)
+            return BadRequest(new ClientResponse("Not found."));
+        
+        var resource = _mapper.Map<Client, ClientResource>(client);
+        return Ok(resource);
+    }
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveClientResource resource)

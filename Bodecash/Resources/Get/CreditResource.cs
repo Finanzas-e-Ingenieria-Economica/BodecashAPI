@@ -3,7 +3,7 @@ namespace BodecashAPI.Bodecash.Resources.Get;
 public class CreditResource
 {
     public int Id { get; set; }
-    public int InterestRate { get; set; }
+    public decimal InterestRate { get; set; }
     public string InterestType { get; set; }
     public string? Capitalization { get; set; }
     public decimal PenaltyInterestRate { get; set; }

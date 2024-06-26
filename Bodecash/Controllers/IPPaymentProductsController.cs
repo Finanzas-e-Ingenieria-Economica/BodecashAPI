@@ -11,12 +11,12 @@ namespace BodecashAPI.Bodecash.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]
-public class IPPaymentProductProductsController : ControllerBase
+public class IPPaymentProductsController : ControllerBase
 {
     private readonly IIPPaymentProductService _iPPaymentProductService;
     private readonly IMapper _mapper;
 
-    public IPPaymentProductProductsController(IIPPaymentProductService iPPaymentProductService, IMapper mapper)
+    public IPPaymentProductsController(IIPPaymentProductService iPPaymentProductService, IMapper mapper)
     {
         _iPPaymentProductService = iPPaymentProductService;
         _mapper = mapper;

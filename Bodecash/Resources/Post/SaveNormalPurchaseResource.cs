@@ -4,11 +4,11 @@ public class SaveNormalPurchaseResource
 {
     public decimal AmountDue { get; set; }
     public DateTime DueDate { get; set; }
-    public DateTime PaymentDate { get; set; }
+    public DateTime? PaymentDate { get; set; }
     public bool IsPaid { get; set; }
     public int? DaysPastDue { get; set; }
     
-    public int InterestRate { get; set; }
+    public decimal InterestRate { get; set; }
     public string InterestType { get; set; }
     public string? Capitalization { get; set; }
     public decimal PenaltyInterestRate { get; set; }
@@ -18,6 +18,6 @@ public class SaveNormalPurchaseResource
     public decimal UsedCredit { get; set; }
     public decimal RemainingCredit { get; set; }
     public bool IsCreditPayed { get; set; }
-    
-    public int CreditId { get; set; }
+    public int ShopkeeperId { get; set; }
+    public int ClientId { get; set; }
 }

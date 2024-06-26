@@ -23,6 +23,12 @@ public class ShopkeeperRepository : BaseRepository, IShopkeeperRepository
         return await _context.Shopkeepers.FindAsync(id);
     }
 
+    public async Task<Shopkeeper> GetByPersonalDataIdAsync(int id)
+    {
+        return await _context.Shopkeepers
+            .FirstOrDefaultAsync(shopkeeper => shopkeeper.PersonalDataId == id);
+    }
+
     public async Task AddAsync(Shopkeeper shopkeeper)
     {
         await _context.Shopkeepers.AddAsync(shopkeeper);

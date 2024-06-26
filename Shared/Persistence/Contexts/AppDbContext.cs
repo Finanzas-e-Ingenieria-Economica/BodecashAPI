@@ -61,10 +61,11 @@ public class AppDbContext : DbContext
         builder.Entity<IPPayment>().Property(p => p.Interest).IsRequired();
         builder.Entity<IPPayment>().Property(p => p.Fee).IsRequired();
         builder.Entity<IPPayment>().Property(p => p.Amortization).IsRequired();
+        builder.Entity<IPPayment>().Property(p => p.SaldoInicial).IsRequired();
         builder.Entity<IPPayment>().Property(p => p.DueDate).IsRequired();
         builder.Entity<IPPayment>().Property(p => p.IsPaid).IsRequired();
         builder.Entity<IPPayment>().Property(p => p.DaysPastDue);
-        builder.Entity<IPPayment>().Property(p => p.PaymentDate).IsRequired();
+        builder.Entity<IPPayment>().Property(p => p.PaymentDate);
         
         builder.Entity<IPPaymentProduct>().ToTable("IPPaymentProducts");
         builder.Entity<IPPaymentProduct>().HasKey(p => p.Id);
@@ -79,7 +80,7 @@ public class AppDbContext : DbContext
         builder.Entity<NormalPurchase>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<NormalPurchase>().Property(p => p.AmountDue).IsRequired();
         builder.Entity<NormalPurchase>().Property(p => p.DueDate).IsRequired();
-        builder.Entity<NormalPurchase>().Property(p => p.PaymentDate).IsRequired();
+        builder.Entity<NormalPurchase>().Property(p => p.PaymentDate);
         builder.Entity<NormalPurchase>().Property(p => p.IsPaid).IsRequired();
         builder.Entity<NormalPurchase>().Property(p => p.DaysPastDue);
         

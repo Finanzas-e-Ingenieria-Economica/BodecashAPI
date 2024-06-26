@@ -30,6 +30,11 @@ public class ClientService : IClientService
         return await _clientRepository.FindByIdAsync(id);
     }
 
+    public async Task<Client> GetByPersonalDataIdAsync(int id)
+    {
+        return await _clientRepository.GetByPersonalDataIdAsync(id);
+    }
+
     public async Task<ClientResponse> SaveAsync(Client client, PersonalData personalData)
     {
         try

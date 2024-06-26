@@ -22,6 +22,12 @@ public class ClientRepository : BaseRepository, IClientRepository
         return await _context.Clients.FindAsync(id);
     }
 
+    public async Task<Client> GetByPersonalDataIdAsync(int id)
+    {
+        return await _context.Clients
+            .FirstOrDefaultAsync(client => client.PersonalDataId == id);
+    }
+
     public async Task AddAsync(Client client)
     {
         await _context.Clients.AddAsync(client);

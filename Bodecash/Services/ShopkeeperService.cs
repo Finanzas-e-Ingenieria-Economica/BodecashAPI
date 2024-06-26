@@ -29,6 +29,11 @@ public class ShopkeeperService : IShopkeeperService
         return await _shopkeeperRepository.FindByIdAsync(id);
     }
 
+    public async Task<Shopkeeper> GetByPersonalDataIdAsync(int id)
+    {
+        return await _shopkeeperRepository.GetByPersonalDataIdAsync(id);
+    }
+
     public async Task<ShopkeeperResponse> SaveAsync(Shopkeeper shopkeeper, PersonalData personalData)
     {
         try

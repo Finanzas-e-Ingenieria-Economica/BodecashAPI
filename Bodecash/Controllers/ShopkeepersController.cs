@@ -40,6 +40,17 @@ public class ShopkeepersController : ControllerBase
         var resource = _mapper.Map<Shopkeeper, ShopkeeperResource>(shopkeeper);
         return Ok(resource);
     }
+    
+    [HttpGet("personaldata/{id:int}")]
+    public async Task<IActionResult> GetByPersonalDataIdAsync(int id)
+    {
+        var shopkeeper = await _shopkeeperService.GetByPersonalDataIdAsync(id);
+        if (shopkeeper == null)
+            return BadRequest(new ShopkeeperResponse("Not found."));
+        
+        var resource = _mapper.Map<Shopkeeper, ShopkeeperResource>(shopkeeper);
+        return Ok(resource);
+    }
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveShopkeeperResource resource)

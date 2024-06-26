@@ -7,5 +7,4 @@ public class SaveClientResource
     public string Password { get; set; }
     public string DNI { get; set; }
     public string UserType { get; set; }
-    public int PersonalDataId { get; set; }
 }

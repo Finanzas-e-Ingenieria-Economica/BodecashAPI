@@ -7,5 +7,6 @@ public interface IShopkeeperService
 {
     Task<IEnumerable<Shopkeeper>> ListAsync();
     Task<Shopkeeper> GetByIdAsync(int id);
+    Task<Shopkeeper> GetByPersonalDataIdAsync(int id);
     Task<ShopkeeperResponse> SaveAsync(Shopkeeper shopkeeper, PersonalData personalData);
 }
